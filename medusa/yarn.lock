@@ -5,9 +5,9 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@agilo/medusa-analytics-plugin@npm:^1.2.0-0":
-  version: 1.2.0-0
-  resolution: "@agilo/medusa-analytics-plugin@npm:1.2.0-0"
+"@agilo/medusa-analytics-plugin@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "@agilo/medusa-analytics-plugin@npm:1.2.1"
   dependencies:
     "@radix-ui/react-popover": "npm:^1.1.14"
     "@radix-ui/react-slot": "npm:^1.2.3"
@@ -37,7 +37,7 @@ __metadata:
     "@mikro-orm/postgresql": 6.4.3
     awilix: ^8.0.1
     pg: ^8.13.0
-  checksum: 10c0/01383f290d76ce37be2fc3f1f19a3d0e2ffccd70c55a4ae63727811393dc5a94103ac368975692e31cdf6efc5e31e03495d7d7131cc633ffe8d519655b4e6017
+  checksum: 10c0/c14d7529360b695acdf073d8624450a359ddf3bd363e86c926012dad158d2db810dda01a31ccd3d5e48ae3bf3adeddeb821906ae716ba47c8471d1698a14f815
   languageName: node
   linkType: hard
 
@@ -14061,7 +14061,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "fashion-starter-medusa@workspace:."
   dependencies:
-    "@agilo/medusa-analytics-plugin": "npm:^1.2.0-0"
+    "@agilo/medusa-analytics-plugin": "npm:^1.2.1"
     "@medusajs/admin-sdk": "npm:2.8.8"
     "@medusajs/cli": "npm:2.8.8"
     "@medusajs/framework": "npm:2.8.8"
