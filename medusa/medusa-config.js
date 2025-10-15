@@ -21,21 +21,26 @@ module.exports = defineConfig({
     },
   },
   modules: [
-    {
-      resolve: '@medusajs/medusa/payment',
-      options: {
-        providers: [
+    // Only load Stripe payment provider if API key is provided
+    ...(process.env.STRIPE_API_KEY
+      ? [
           {
-            id: 'stripe',
-            resolve: '@medusajs/medusa/payment-stripe',
+            resolve: '@medusajs/medusa/payment',
             options: {
-              apiKey: process.env.STRIPE_API_KEY,
-              webhookSecret: process.env.STRIPE_WEBHOOK_SECRET,
+              providers: [
+                {
+                  id: 'stripe',
+                  resolve: '@medusajs/medusa/payment-stripe',
+                  options: {
+                    apiKey: process.env.STRIPE_API_KEY,
+                    webhookSecret: process.env.STRIPE_WEBHOOK_SECRET,
+                  },
+                },
+              ],
             },
           },
-        ],
-      },
-    },
+        ]
+      : []),
     {
       resolve: './src/modules/fashion',
     },
